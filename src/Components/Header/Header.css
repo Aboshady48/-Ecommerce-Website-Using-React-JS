@@ -1,0 +1,122 @@
+
+:root{
+    --Navy : #213448;
+    --BabyBlue: #547792;
+    --BabyBlue2 : #94B4C1;
+    --Cold : #ECEFCA;
+}
+
+.top-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .top-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .top-header a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Navy);
+    transition: color 0.3s ease;
+  }
+  
+  .top-header a:hover {
+    color: var(--BabyBlue);
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--Cold);
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0.3rem 0.8rem;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 1rem;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--Navy);
+  }
+  
+  .search-box button {
+    background-color: var(--BabyBlue);
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-box button:hover {
+    background-color: var(--BabyBlue2);
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .header-icons .icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--Navy);
+    transition: transform 0.3s ease;
+  }
+  
+  .header-icons .icon:hover {
+    transform: scale(1.1);
+    color: var(--BabyBlue);
+  }
+  
+  .header-icons .count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--BabyBlue);
+    color: white;
+    border-radius: 50%;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .top-header .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .search-box {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .header-icons {
+      align-self: flex-end;
+    }
+  }
+  
