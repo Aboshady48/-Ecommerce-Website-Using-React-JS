@@ -71,7 +71,7 @@ const BottomHeader = () => {
 
             <div
               className={`category-nav-list ${categoryMenuOpen ? "show" : ""}`}
-            >
+              >
               {loading ? (
                 <p className="loading">Loading...</p>
               ) : categories.length > 0 ? (
