@@ -1,0 +1,138 @@
+/* Slide Section (already done, just included for full context) */
+:root {
+    --Navy: #213448;
+    --BabyBlue: #547792;
+    --BabyBlue2: #94B4C1;
+    --Cold: #ECEFCA;
+  }
+  
+  .top-slide {
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ECEFCA;
+    padding: 15px 20px 20px 0;
+    text-align: center;
+  }
+  
+  .top-slide::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100px;
+    height: 2px;
+    background-color: var(--BabyBlue2);
+  }
+  
+  .top-slide h1 {
+    font-size: 30px;
+    color: var(--Navy);
+  }
+  
+  .top-slide p {
+    color: var(--BabyBlue);
+    font-size: 16px;
+  }
+  
+  /* ============================
+     🛍 Product Card Styling
+  ============================ */
+  .product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px;
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Product Image */
+  .img-product {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .img-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Name */
+  .name-product {
+    font-size: 16px;
+    color: var(--Navy);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Rating Stars */
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Price */
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--BabyBlue);
+    margin-bottom: 15px;
+  }
+  
+  /* Action Buttons */
+  .action span {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    color: var(--Navy);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .action span svg:hover {
+    color: var(--BabyBlue);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .product {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .img-product {
+      height: 150px;
+    }
+  
+    .name-product {
+      font-size: 14px;
+    }
+  
+    .price {
+      font-size: 18px;
+    }
+  
+    .stars {
+      font-size: 16px;
+    }
+  
+    .action span {
+      font-size: 18px;
+    }
+  }
+  

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Autoplay,Pagination } from 'swiper/modules';
 
 import './Style.css';
 
@@ -32,7 +32,7 @@ const HeroSlider = () => {
   return (
     <div className="hero">
       <div className="container">
-        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+        <Swiper pagination={true} loop={true} autoplay={{delay: 2000, disableOnInteraction: false,}} modules={[ Autoplay,Pagination]} className="mySwiper">
 
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
